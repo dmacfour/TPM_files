@@ -7,8 +7,6 @@ require(data.table)
 
 #Read in county/region names
 
-#County_Names_and_Regions <- read_excel("~/TPM_SPM_Analysis/Data/County Names and Regions.xlsx")
-
 st <- Sys.time()
 
 ##Temp county/regions using sup areas
