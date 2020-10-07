@@ -1,7 +1,7 @@
 ###Packages###----
 require(dplyr)
 require(readxl)
-require(data.table)
+require(reshape2)
 
 ###SPM CODE###----
 
@@ -281,7 +281,7 @@ TPMsubtransformed$Region <- tools::toTitleCase(TPMsubtransformed$Region)
 
 #Save Files----
 
-save.image("TPM_Dashboard/Output.RData")
+save(TPMsubtransformed, current_year,file = "TPM_Dashboard/Output.RData")
 
 write.csv(TPMsubtransformed, file = "Data/Output/Processed_data.csv")
 
