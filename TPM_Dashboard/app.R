@@ -152,7 +152,7 @@ server <- function(input, output) {
             datsub <- data.frame(Region = dat$Region, Year = dat$Year, p = dat$enrollment_count)
             datsub <- subset(datsub, select = c(Region, Year, p))
             datsub$p <- round(datsub$p)
-            names(datsub)[names(datsub) == "p"] <- input$Variable
+            names(datsub)[names(datsub) == "p"] <- input$Variable1
             
         } else if(input$Variable %in% c("Number of Leavers")){
             datsub <- data.frame(x = dat$enrollment_count, ar = dat$Attrition, st = dat$`Student/Teacher Ratio`, 
